@@ -47,6 +47,7 @@ namespace WindowsApplication53
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -77,7 +78,6 @@ namespace WindowsApplication53
             this.pivotGridControl1.OptionsDataField.AreaIndex = 1;
             this.pivotGridControl1.Size = new System.Drawing.Size(336, 292);
             this.pivotGridControl1.TabIndex = 0;
-            this.pivotGridControl1.Click += new System.EventHandler(this.pivotGridControl1_Click);
             this.pivotGridControl1.CustomChartDataSourceRows += new DevExpress.XtraPivotGrid.PivotCustomChartDataSourceRowsEventHandler(this.pivotGridControl1_CustomChartDataSourceRows);
             // 
             // dataSet1
@@ -112,6 +112,7 @@ namespace WindowsApplication53
             // 
             this.fiedName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
             this.fiedName.AreaIndex = 0;
+            this.fiedName.Caption = "Products";
             this.fiedName.FieldName = "Name";
             this.fiedName.Name = "fiedName";
             // 
@@ -129,7 +130,7 @@ namespace WindowsApplication53
             // 
             this.fieldValue.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
             this.fieldValue.AreaIndex = 0;
-            this.fieldValue.Caption = "Sum";
+            this.fieldValue.Caption = "Sales";
             this.fieldValue.FieldName = "Value";
             this.fieldValue.Name = "fieldValue";
             // 
@@ -137,7 +138,7 @@ namespace WindowsApplication53
             // 
             this.fieldCount.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
             this.fieldCount.AreaIndex = 2;
-            this.fieldCount.Caption = "Count";
+            this.fieldCount.Caption = "Quantitiy";
             this.fieldCount.FieldName = "Value";
             this.fieldCount.Name = "fieldCount";
             this.fieldCount.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
@@ -184,26 +185,25 @@ namespace WindowsApplication53
             // 
             this.chartControl1.DataSource = this.pivotGridControl1;
             xyDiagram1.AxisX.Label.Staggered = true;
-            xyDiagram1.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram1.AxisX.Range.SideMarginsEnabled = true;
+            xyDiagram1.AxisX.Title.Text = "Date";
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram1.AxisY.Range.SideMarginsEnabled = true;
+            xyDiagram1.AxisY.Title.Text = "Sales Average Quantitiy";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.chartControl1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
             this.chartControl1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
-            this.chartControl1.Legend.MaxVerticalPercentage = 30;
+            this.chartControl1.Legend.MaxVerticalPercentage = 30D;
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.SeriesDataMember = "Series";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
             this.chartControl1.SeriesTemplate.ArgumentDataMember = "Arguments";
             this.chartControl1.SeriesTemplate.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
-            sideBySideBarSeriesLabel1.LineVisible = true;
+            sideBySideBarSeriesLabel1.LineVisibility = DevExpress.Utils.DefaultBoolean.True;
             this.chartControl1.SeriesTemplate.Label = sideBySideBarSeriesLabel1;
+            this.chartControl1.SeriesTemplate.SeriesDataMember = "Series";
             this.chartControl1.SeriesTemplate.ValueDataMembersSerializable = "Values";
             this.chartControl1.Size = new System.Drawing.Size(456, 292);
             this.chartControl1.TabIndex = 0;
@@ -222,6 +222,7 @@ namespace WindowsApplication53
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
