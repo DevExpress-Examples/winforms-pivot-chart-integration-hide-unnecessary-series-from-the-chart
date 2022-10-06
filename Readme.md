@@ -11,7 +11,7 @@ This example demonstrates how handle the [PivotGridControl.CustomChartDataSource
 
 ## Example Overview
 
-The `CustomChartDataSourceRows` event parameter’s [e.Rows](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomChartDataSourceRowsEventArgs.Rows) property allows you to access data that is passed to the chart. The Pivot Grid supplies data to the attached Chart control in the form of a simple table. Each row of this table is a single Pivot Grid cell. From this row (the `PivotChartDataSourceRow` object), you can get cell values, the argument object generated from the corresponding field value, and the series name generated from the opposite field values. For each record, you can also obtain information about a Pivot Grid cell to which this record corresponds. The example demonstrates how to modify the Chart data source table to hide speicifed Chart series.
+The `CustomChartDataSourceRows` event parameter’s [e.Rows](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotCustomChartDataSourceRowsEventArgs.Rows) property allows you to access data that is passed to the Chart. The Pivot Grid supplies data to the attached Chart control in the form of a simple table. Each row of this table is a single Pivot Grid cell. From this row (the `PivotChartDataSourceRow` object), you can get cell values, the argument object generated from the corresponding field value, and the series name generated from the opposite field values. For each record, you can also obtain information about a Pivot Grid cell to which this record corresponds. The example demonstrates how to modify the Chart data source table to hide the speicifed Chart series.
 
 ## Files to Review
 
