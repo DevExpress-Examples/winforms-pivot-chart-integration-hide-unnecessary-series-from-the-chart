@@ -3,9 +3,9 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# WinForms - How to hide unnecessary series from the chart (Pivot - Chart Integration) 
+# WinForms - How to hide unnecessary series from the chart (Pivot Grid - Chart Integration)
 
-This example demonstrates how handle the [PivotGridControl.CustomChartDataSourceRows](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomChartDataSourceRows) event to hide unnecessary series from the Chart control connected to the Pivot Grid.
+This example demonstrates how to handle the [PivotGridControl.CustomChartDataSourceRows](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomChartDataSourceRows) event to hide unnecessary series from the Chart control connected to the Pivot Grid.
 
 ![Pivot Grid - Chart integration](images/pivotgrid.png)
 
