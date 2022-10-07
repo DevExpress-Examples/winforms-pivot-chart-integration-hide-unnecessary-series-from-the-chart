@@ -31,7 +31,8 @@ namespace WindowsApplication53 {
             myTable.Rows.Add(new object[] {"Konbu", DateTime.Today.AddDays(4), 22 });
         }
 
-        private void pivotGridControl1_CustomChartDataSourceRows(object sender, DevExpress.XtraPivotGrid.PivotCustomChartDataSourceRowsEventArgs e) {
+        private void pivotGridControl1_CustomChartDataSourceRows(object sender, 
+            DevExpress.XtraPivotGrid.PivotCustomChartDataSourceRowsEventArgs e) {
             for (int i = e.Rows.Count  - 1; i >= 0; i--) {
                 if (!Object.Equals( e.Rows[i].RowValueInfo.DataField,  fieldValue) )
                     e.Rows.RemoveAt(i);       
