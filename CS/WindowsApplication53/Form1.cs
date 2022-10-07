@@ -2,8 +2,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 
-namespace WindowsApplication53
-{
+namespace WindowsApplication53 {
     public partial class Form1 : Form {
         public Form1() {
             InitializeComponent();
@@ -13,7 +12,6 @@ namespace WindowsApplication53
             pivotGridControl1.RefreshData();
             pivotGridControl1.BestFit();
             pivotGridControl1.BestFitDataHeaders(true);
-
             chartControl1.SeriesTemplate.ChangeView(DevExpress.XtraCharts.ViewType.Line);
         }
         private void PopulateTable() {
@@ -36,8 +34,7 @@ namespace WindowsApplication53
         private void pivotGridControl1_CustomChartDataSourceRows(object sender, DevExpress.XtraPivotGrid.PivotCustomChartDataSourceRowsEventArgs e) {
             for (int i = e.Rows.Count  - 1; i >= 0; i--) {
                 if (!Object.Equals( e.Rows[i].RowValueInfo.DataField,  fieldValue) )
-                    e.Rows.RemoveAt(i);
-               
+                    e.Rows.RemoveAt(i);       
             }
         }
     }
